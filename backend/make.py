@@ -3,6 +3,11 @@ import os
 
 current_dir = os.path.dirname(__file__)
 
+def install_dependencies():
+    print("Installing dependencies")
+    subprocess.run(["pip3", "install", "-r", current_dir+"/requirements.txt"])
+    print("Dependencies installed")
+
 def make_predict_model():
     print("Making predict model")
     subprocess.run(["python3", current_dir+"/lib/preprocess.py"])
