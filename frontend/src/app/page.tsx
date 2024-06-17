@@ -41,7 +41,7 @@ export default function Home() {
         const res = await axios.post(apiEndPoint, {article});
         const data = await res.data;
         setPrediction(data.prediction);
-        setLinks((prevLinks) => [...prevLinks, ...data.links]);
+        setLinks(data.links);
         console.log(data);
       }
       catch (err) {
