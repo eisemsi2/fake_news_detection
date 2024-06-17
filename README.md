@@ -26,4 +26,4 @@ npm start
 ```bash
 npm start
 ```
-Voilla the web app is now running at <a href="http:localhost::3000/"> LocalHost Port 3000 </a>
+Voilla the web app is now running at <a href="http://localhost:3000"> LocalHost Port 3000 </a>
