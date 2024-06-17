@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const apiEndPoint = process.env.API_ENDPOINT || 'http://localhost:8000/predict';
+const apiEndPoint = process.env.API_ENDPOINT || 'http://localhost:5000/predict';
 
 export default function Home() {
 
