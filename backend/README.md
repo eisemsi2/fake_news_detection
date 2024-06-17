@@ -5,3 +5,8 @@ To detect fake news the application :
   * The article headline is then searched over google programitically and using a list of trusted newspaper publishers (in trusted.txt), the trusted articles are then scrapped from the web. This is done using the ``` ./lib/webscrap.js ```.
   * Using a Bert-Base model the article given to us and the article on the internet are checked for similarity and a similarity score is given.
   * The combination of the two score is used for giving the final prediction.
+
+
+#### References
+News.csv - https://www.kaggle.com/c/fake-news/data
+news.csv - https://www.kaggle.com/datasets/imbikramsaha/fake-real-news
