@@ -13,4 +13,4 @@
    ```bash
    python3 make.py
    ```
-
+This Command will install all the python and node dependencies and build the frontend codes and create the models used for prediction.
