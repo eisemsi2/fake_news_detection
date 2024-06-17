@@ -3,7 +3,7 @@
 ### Requirements
 <ul>
     <li> Node Version >= 18.0.0
-    <li> Python3 
+    <li> Python3 and Pip3
     <li> An Operating System based on UNIX based file system (Linux/Mac) (Should Work on Windows, but didn't have the chance to test)</li>
 </ul>
 
