@@ -4,7 +4,7 @@ import pickle
 
 start_time = time.time()
 
-with open('verify_model.pkl', 'rb') as model_file:
+with open('../models/verify_model.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
 if __name__ == '__main__':

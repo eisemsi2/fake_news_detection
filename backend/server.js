@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { spawnSync } = require('child_process');
-const {getSomeLinks, getArtilce} = require('./webscrap');
+const {getSomeLinks, getArtilce} = require('./lib/webscrap');
 const cors = require('cors');
 
 

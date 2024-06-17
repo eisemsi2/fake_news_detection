@@ -22,10 +22,10 @@ if __name__ == "__main__":
         print("Usage: python predict.py <article>")
         sys.exit(1)
 
-    with open('model.pkl', 'rb') as model_file:
+    with open('../models/model.pkl', 'rb') as model_file:
         model = pickle.load(model_file)
     
-    with open('vectorizer.pkl', 'rb') as vectorizer_file:
+    with open('../models/vectorizer.pkl', 'rb') as vectorizer_file:
         vectorizer = pickle.load(vectorizer_file)
 
     article = sys.argv[1]

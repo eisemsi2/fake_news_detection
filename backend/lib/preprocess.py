@@ -46,10 +46,10 @@ def train_and_export(df):
     print(accuracy_score(y_test, model.predict(X_test)))
     print(classification_report(y_test, model.predict(X_test)))
 
-    with open('model.pkl', 'wb') as model_file:
+    with open('../models/model.pkl', 'wb') as model_file:
         pickle.dump(model, model_file)
 
-    with open('vectorizer.pkl', 'wb') as vectorizer_file:
+    with open('../models/vectorizer.pkl', 'wb') as vectorizer_file:
         pickle.dump(tfidf_vectorizer, vectorizer_file)
 
 def main():
