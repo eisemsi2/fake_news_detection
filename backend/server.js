@@ -20,7 +20,7 @@ app.post('/predict',async (req, res) =>  {
     console.log('Time taken to get links: ', end-start);
     console.log(links);
     start = new Date().getTime();
-    const process = spawnSync('python3', ['prediction.py', article]);
+    const process = spawnSync('python3', ['./lib/prediction.py', article]);
     const result = process.stdout?.toString()?.trim();
     const error = process.stderr?.toString()?.trim();
     end = new Date().getTime();
@@ -38,7 +38,7 @@ app.post('/predict',async (req, res) =>  {
         }
         console.log(links[i]);
         console.log(article2);
-        const process2 = spawnSync('python3', ['verifyarticle.py', article, article2]);
+        const process2 = spawnSync('python3', ['./lib/verifyarticle.py', article, article2]);
         const result2 = process2.stdout?.toString()?.trim();
         const error2 = process2.stderr?.toString()?.trim();
         if (result2) {

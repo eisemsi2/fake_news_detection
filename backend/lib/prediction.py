@@ -4,6 +4,9 @@ from nltk.corpus import stopwords
 import string
 from nltk.stem import WordNetLemmatizer
 import pickle
+import os
+
+current_dir = os.path.dirname(__file__)
 
 def preprocess_text(text):
     text = text.lower()
@@ -22,10 +25,10 @@ if __name__ == "__main__":
         print("Usage: python predict.py <article>")
         sys.exit(1)
 
-    with open('../models/model.pkl', 'rb') as model_file:
+    with open(current_dir+'/../models/model.pkl', 'rb') as model_file:
         model = pickle.load(model_file)
     
-    with open('../models/vectorizer.pkl', 'rb') as vectorizer_file:
+    with open(current_dir+'/../models/vectorizer.pkl', 'rb') as vectorizer_file:
         vectorizer = pickle.load(vectorizer_file)
 
     article = sys.argv[1]

@@ -1,10 +1,11 @@
 import sys
 import time
 import pickle
-
+import os
 start_time = time.time()
+current_dir = os.path.dirname(__file__)
 
-with open('../models/verify_model.pkl', 'rb') as model_file:
+with open(current_dir+'/../models/verify_model.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
 if __name__ == '__main__':

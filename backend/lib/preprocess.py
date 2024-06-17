@@ -11,7 +11,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 import pickle
 import string
+import os
 
+current_dir = os.path.dirname(__file__)
 nltk.download('stopwords')
 nltk.download('wordnet')
 
@@ -46,19 +48,19 @@ def train_and_export(df):
     print(accuracy_score(y_test, model.predict(X_test)))
     print(classification_report(y_test, model.predict(X_test)))
 
-    with open('../models/model.pkl', 'wb') as model_file:
+    with open(current_dir+'/../models/model.pkl', 'wb') as model_file:
         pickle.dump(model, model_file)
 
-    with open('../models/vectorizer.pkl', 'wb') as vectorizer_file:
+    with open(current_dir+'/../models/vectorizer.pkl', 'wb') as vectorizer_file:
         pickle.dump(tfidf_vectorizer, vectorizer_file)
 
 def main():
-    df = pd.read_csv('News.csv')
+    df = pd.read_csv(current_dir+'/../data_sets/News.csv')
     df1 = pd.DataFrame()
     df1['title'] = df['title']
     df1['class'] = df['class']
     # print(df1)
-    df2 = pd.read_csv('news.csv')
+    df2 = pd.read_csv(current_dir +'/../data_sets/news.csv')
     df2['class'] = df2['label'].apply(lambda x: 0 if x == 'FAKE' else 1)
     df2['title'] = df2['text']
     df2 = df2.drop(['text'], axis=1)
