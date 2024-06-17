@@ -8,5 +8,5 @@ To detect fake news the application :
 
 
 #### References
-News.csv - https://www.kaggle.com/c/fake-news/data
-news.csv - https://www.kaggle.com/datasets/imbikramsaha/fake-real-news
+* News.csv - https://www.kaggle.com/c/fake-news/data
+* news.csv - https://www.kaggle.com/datasets/imbikramsaha/fake-real-news
