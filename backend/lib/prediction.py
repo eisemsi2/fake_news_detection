@@ -9,6 +9,20 @@ import os
 current_dir = os.path.dirname(__file__)
 
 def preprocess_text(text):
+    """
+    Preprocesses the input text by performing several transformations:
+    - Converts text to lowercase
+    - Removes punctuation
+    - Removes digits
+    - Removes stopwords (common words like 'the', 'is', 'and')
+    - Lemmatizes words (reduces them to their base or root form)
+
+    Args:
+    text (str): The input text to preprocess.
+
+    Returns:
+    str: The preprocessed text.
+    """
     text = text.lower()
     text = text.translate(str.maketrans('','',string.punctuation))
     text = re.sub(r'\d+', '', text)
