@@ -2,10 +2,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { spawnSync } = require('child_process');
 const {getSomeLinks, getArtilce} = require('./webscrap');
-const { Axios, AxiosError } = require('axios');
+const cors = require('cors');
+
 
 const app = express();
 
+app.use(cors());
 app.use(bodyParser.json());
 
 
@@ -47,9 +49,13 @@ app.post('/predict',async (req, res) =>  {
     }
     end = new Date().getTime();
     console.log('Time taken to verify articles: ', end-start);
-    res.json({result ,score});
+    const pred = (2*parseFloat(result) + score )/ 3;
+    res.json({
+        "prediction": pred,
+        "links": links  
+    });
 });
 
-app.listen(3000,() => {
-    console.log('server running at http://localhost:3000/');
+app.listen(5000,() => {
+    console.log('server running at http://localhost:5000/');
 })
