@@ -12,9 +12,9 @@
     <li> Open the project folder
     <li> Type the Command 
     <br>
-        ```
-        python3 make.py
-        ```
+    ```
+            python3 make.py
+    ```
     
 </ul>
 
