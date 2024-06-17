@@ -29,12 +29,27 @@ def preprocess_text(text):
     return text
 
 def preprocess_df(texts):
+    """
+    Preprocesses a list of texts.
+
+    Args:
+    texts (list of str): List of input texts to preprocess.
+
+    Returns:
+    list of str: List of preprocessed texts.
+    """
     processed_text = []
     for text in tqdm(texts):
         processed_text.append(preprocess_text(text))
     return processed_text
 
 def train_and_export(df):
+    """
+    Trains a Logistic Regression model using TF-IDF features from text data and exports the model and vectorizer.
+
+    Args:
+    df (DataFrame): Pandas DataFrame containing 'title' (text) and 'class' (target) columns.
+    """
     df['title'] = preprocess_df(df['title'].values)
 
 
