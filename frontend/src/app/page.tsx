@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+const apiEndPoint = process.env.API_ENDPOINT || 'http://localhost:8000/predict';
+
 export default function Home() {
 
   const [article, setArticle] = useState<string>('');
@@ -35,7 +37,7 @@ export default function Home() {
     const fetchPred = async () => {
       setLoading(true);
       try {
-        const res = await axios.post('http://localhost:5000/predict', {article});
+        const res = await axios.post(apiEndPoint, {article});
         const data = await res.data;
         setPrediction(data.prediction);
         setLinks((prevLinks) => [...prevLinks, ...data.links]);
