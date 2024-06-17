@@ -7,10 +7,10 @@
 </ul>
 
 ### How to Build this Web App
-<ul>
-    <li> Clone this reposotory
-    <li> Open the project folder
-    <li> Type the Command ```` python3 make.py ````
-    
-</ul>
+   * Clone this Repository
+   * Change the current working directory to this repository's root
+   * Type the command
+   ```bash
+   python3 make.py
+   ```
 
