@@ -11,6 +11,7 @@
     <li> Clone this reposotory
     <li> Open the project folder
     <li> Type the Command 
+    <br>
         ```
         python3 make.py
         ```
