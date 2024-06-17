@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import axios from "axios";
+require('dotenv').config();
 
 const apiEndPoint = process.env.API_ENDPOINT || 'http://localhost:5000/predict';
 
