@@ -27,3 +27,6 @@ npm start
 npm start
 ```
 Voilla the web app is now running at <a href="http://localhost:3000"> LocalHost Port 3000 </a>
+
+
+##### Read More at the README.md in the backend folder
