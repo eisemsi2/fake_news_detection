@@ -19,4 +19,5 @@ if __name__ == "__main__":
     os.makedirs("./models", exist_ok=True)
     make()
     subprocess.run(["npm", "install"])
+    subprocess.run(["node", "server.js"])
 
